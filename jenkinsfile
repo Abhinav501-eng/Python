@@ -6,7 +6,7 @@ pipeline{
         }
 
         stage('code compilation'){
-            steps{sh 'python compile'}
+            steps{sh 'pip install -r requirements.txt'}
         }
     }
 }
