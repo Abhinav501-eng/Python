@@ -1,0 +1,12 @@
+pipeline{
+    agent any
+    stages{
+        stage('Scm checkout'){
+            steps{git branch: 'master', url: 'https://github.com/Abhinav501-eng/Python.git'}
+        }
+
+        stage('code compilation'){
+            steps{sh 'python compile'}
+        }
+    }
+}
